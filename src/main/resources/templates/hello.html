@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>hello world</title>
+</head>
+<body>
+<h1>hello <p th:text="${city}"></p>,<p th:text="${name}"></p></h1>
+<table>
+    <legend>
+        <strong>列表</strong>
+    </legend>
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>手机号</th>
+        <th>邮箱</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user :${userList}">
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.phone}"></td>
+        <td th:text="${user.email}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
